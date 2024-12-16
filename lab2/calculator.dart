@@ -7,29 +7,14 @@ void main() {
   double? n2;
   stdout.write('enter a n2');
   n2 = double.parse(stdin.readLineSync()!);
-  double? 
-  switch(c){
-case '+' :
-printf("a+b=%d",a+b);
-break;
-case '-' :
-printf("a-b=%d",a-b);
-break;
-case '*' :
-printf("a*b=%d",a*b);
-break;
-case '/' :
-printf("a/b=%d",a/b);
-if(b != 0){
-printf("a/b=%d",a/b);
-}
-else{
-printf("divid by  o is not valid");
-}
-break;
-default :
-printf("Invalid");
-}
-}
+  {
+    for(i=0;i<n1;i++){
 
-Binary file
+    }
+print("n1+n2",n1+n2);
+print("n1-n2",n1-n2);
+print("n1*n2",n1*n2);
+print("n1/n2",n1/n2);
+}
+print("divid by  o is not valid");
+}
