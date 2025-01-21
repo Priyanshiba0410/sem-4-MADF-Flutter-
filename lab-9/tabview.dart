@@ -1,71 +1,69 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class tabview extends StatelessWidget {
-  const tabview({super.key});
+
+class Tabview extends StatelessWidget {
+  const Tabview({super.key});
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
-        child:Scaffold(
-          appBar: AppBar(
-            title: Text("Tab view"),
-            bottom: TabBar(tabs: [
-              Tab(text: "First_page",),
-              Tab(text: "Second_page",),
-              Tab(text: "Third_page",)
-            ],
-            ),
-          ),
-          body: TabBarView(children:[
-            ElevatedButton(onPressed: (){
-              showDialog(context: context, builder: (context){
-                return AlertDialog(
-                  title:Text("Tab view1") ,
-                  content: Text("First_page"),
-                  actions: [
-                    IconButton(onPressed:(){
-                      Navigator.pop(context);
-
-                    } , icon:Icon(CupertinoIcons.back))
-                  ],
-                );
-              },
-              );
-            }, child: Text("Tab view")),
-            ElevatedButton(onPressed: (){
-              showDialog(context: context, builder: (context){
-                return AlertDialog(
-                  title:Text("Tab view2") ,
-                  content: Text("Second_page"),
-                  actions: [
-                    IconButton(onPressed:(){
-                      Navigator.pop(context);
-                    } , icon:Icon(CupertinoIcons.back))
-                  ],
-                );
-              },
-              );
-            }, child: Text("Tab view")),
-            ElevatedButton(onPressed: (){
-              showDialog(context: context, builder: (context){
-                return AlertDialog(
-                  title:Text("Tab view3") ,
-                  content: Text("Third_page"),
-                  actions: [
-                    IconButton(onPressed:(){
-                      Navigator.pop(context);
-
-                    } , icon:Icon(CupertinoIcons.back))
-                  ],
-                );
-              },
-              );
-            }, child: Text("Tab view"))
-
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Tab View"),
+          bottom: TabBar(tabs:[
+            Tab(text: "First_Page",),
+            Tab(text: "Second_Page",),
+            Tab(text: "Third_Page",),
           ],
-          ),
+          ) ,
         ),
+        body: TabBarView(children: [
+          ElevatedButton(onPressed: (){
+            showDialog(context: context, builder: (context){
+              return AlertDialog(
+                title: Text("Tab View"),
+                content: Text("First_Page"),
+                actions: [
+                  IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  },icon: Icon(CupertinoIcons.back))
+                ],
+              );
+            },
+            );
+          }, child: Text("Tab View1")),
+          ElevatedButton(onPressed: (){
+            showDialog(context: context, builder: (context){
+              return AlertDialog(
+                title: Text("Tab View"),
+                content: Text("Second_Page"),
+                actions: [
+                  IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  },icon: Icon(CupertinoIcons.back))
+                ],
+              );
+            },
+            );
+          }, child: Text("Tab View2")),
+          ElevatedButton(onPressed: (){
+            showDialog(context: context, builder: (context){
+              return AlertDialog(
+                title: Text("Tab View"),
+                content: Text("Third_Page"),
+                actions: [
+                  IconButton(onPressed: (){
+                    Navigator.pop(context);
+                  },icon: Icon(CupertinoIcons.back))
+                ],
+              );
+            },
+            );
+          }, child: Text("Tab View3")),
+        ],
+        ),
+      ),
     );
   }
 }
